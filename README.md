@@ -12,3 +12,8 @@
   * cin は呼び出されるたびに cout をフラッシュしているらしい。
 * `ios::sync_with_stdio(false);' で stdio との同期を解除
 * stdio では endl ではなく \n を使ったほうが早くなるらしい。
+
+
+
+## TODO
+* プロジェクト名「aoj」はなんとかする。
