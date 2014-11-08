@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "841CF5841919FFE8008ED49D"
-               BuildableName = "aoj"
-               BlueprintName = "aoj"
-               ReferencedContainer = "container:aoj.xcodeproj">
+               BuildableName = "procon"
+               BlueprintName = "procon"
+               ReferencedContainer = "container:procon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "841CF5841919FFE8008ED49D"
-            BuildableName = "aoj"
-            BlueprintName = "aoj"
-            ReferencedContainer = "container:aoj.xcodeproj">
+            BuildableName = "procon"
+            BlueprintName = "procon"
+            ReferencedContainer = "container:procon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "841CF5841919FFE8008ED49D"
-            BuildableName = "aoj"
-            BlueprintName = "aoj"
-            ReferencedContainer = "container:aoj.xcodeproj">
+            BuildableName = "procon"
+            BlueprintName = "procon"
+            ReferencedContainer = "container:procon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "841CF5841919FFE8008ED49D"
-            BuildableName = "aoj"
-            BlueprintName = "aoj"
-            ReferencedContainer = "container:aoj.xcodeproj">
+            BuildableName = "procon"
+            BlueprintName = "procon"
+            ReferencedContainer = "container:procon.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
