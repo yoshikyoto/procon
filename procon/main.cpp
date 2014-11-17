@@ -41,6 +41,7 @@ void warshallFloyd(int d[100][100], int n){
                 }
 };
 
+
 // d:隣接行列  n:グラフのサイズ  s:始点  dist:始点からの距離が入る配列
 void dijkstra(int d[1000][1000], int n, int s, int dist[1000]){
     FOR(i, n) dist[i] = -1;
@@ -65,75 +66,7 @@ void dijkstra(int d[1000][1000], int n, int s, int dist[1000]){
 };
 
 
-int n, m, s, d, a[100000], b[100000], c[100000];
-
 // 信号待ちの結果を返す
-ull traffic(int place, ll time){
-    if(time <= c[place]){
-        return c[place];
-    }else{
-        ll _time = time - c[place];
-        _time = _time % (a[place] + b[place]);
-        if(_time < a[place]){
-            // 信号待ちがなかったとき
-            return time;
-        }else{
-            // 信号待ちしたとき
-            return time - _time + a[place] + b[place];
-        }
-    }
-    return 0;
-};
-
-
 int main(int argc, const char * argv[]){
-    cin >> n >> m >> s >> d;
-    s--; d--;
-    FOR(i, n) cin >> a[i] >> b[i] >> c[i];
-    
-    
-    vector<edge> g[100000];
-    FOR(i, m){
-        int x, y, t;
-        cin >> x >> y >> t;
-        x--, y--;
-        edge e1; e1.to = y; e1.cost = t;
-        g[x].push_back(e1);
-        edge e2; e2.to = x; e2.cost = t;
-        g[y].push_back(e2);
-    }
-    
-    ll time[100000]; // ついた瞬間
-    ll dist[100000]; // 信号待ちも含めた時間
-    FOR(i, n){
-        dist[i] = -1;
-        time[i] = -1;
-    }
-    
-    // ダイクストラ法で探していく
-    dist[s] = traffic(s, 0);
-    time[s] = 0;
-    priority_queue<PLL, vector<PLL>, greater<PLL> > q;
-    q.push(PLL(dist[s], s));
-    while (!q.empty()) {
-        PLL p = q.top(); q.pop();
-        ll i = p.second; // iは基点
-        
-        // iから行ける信号について調べる
-        for(int k = 0; k < g[i].size(); k++){
-            edge e = g[i][k];
-            // 早くついた場合は信号待ちを考える
-            if(time[e.to] > dist[i] + e.cost || time[e.to] == -1){
-                time[e.to] = dist[i] + e.cost;
-                // 信号待ちを考えても早い場合は更新する
-                if(dist[e.to] > traffic(e.to, time[e.to]) || dist[e.to] == -1){
-                    dist[e.to] = traffic(e.to, time[e.to]);
-                    q.push(PLL(dist[e.to], e.to));
-                }
-            }
-            
-        }
-    }
-    cout << time[d] << endl;
-
+    begin();
 }
